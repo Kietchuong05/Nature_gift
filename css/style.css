@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=DM+Serif+Text:ital@0;1&family=Playwrite+DK+Loopet:wght@100..400&family=Poetsen+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=WDXL+Lubrifont+TC&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #E0E7E9;
+    color: #2E4F4F;
+    line-height: 1.6;
+}
+ ul{
+    list-style: none;
+ }
+ a{
+    text-decoration: none;
+ }
+/* logo */
+.hero-section {
+    height: 25vh;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #dcf7e4 0%, #CFFDE1 100%); 
+    position: relative;
+    overflow: hidden;
+}
+
+.tree-animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-branch, .right-branch {
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    background: linear-gradient(to top, #5D4037, #8D6E63);
+    transform-origin: bottom center;
+    box-shadow: 0 0 15px rgba(93, 64, 55, 0.3);
+    z-index: 1;
+}
+
+.left-branch {
+    left: 20%;
+    height: 0;
+    animation: growBranch 1.8s ease-out forwards,
+               gentleSway 8s 2s infinite alternate-reverse;
+}
+
+.right-branch {
+    right: 20%;
+    height: 0;
+    animation: growBranch 1.8s 0.2s ease-out forwards,
+               gentleSway 7s 2.2s infinite alternate;
+}
+
+.logo-wrapper {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    opacity: 1;
+    transform: none;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.logo-wrapper h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #026C02;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    letter-spacing: 2px;
+}
+@keyframes growBranch {
+    0% { height: 0; }
+    100% { height: 70%; }
+}
+
+@keyframes gentleSway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+@keyframes floatIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.falling-leaf {
+    position: absolute;
+    border-radius: 50% 0 50% 50%;
+    z-index: 2;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.2));
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* menu */
+
+.main-menu{
+    background-color: #A0E7E5;
+    font-family: "Rubik Gemstones", system-ui;
+    /* position: fixed;
+    top: 25vh;
+    left: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    
+    z-index: 1000;
+    box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.menu-list{
+    color: #2E4F4F;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.menu-list > li {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.menu-list > li > i {
+    padding: 5px;
+}
+nav{
+    height: 3rem;
+}
+.nav__link:hover,
+.nav__link.active {
+    background-color: #8D9C63;
+    border-radius: 15px;
+}
+.nav__link.active, 
+.nav__link.nav-ac {
+    background-color: #8D9C63 !important;
+    color: white;
+    border-radius: 15px;
+}
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #A0E7E5;
+    min-width: 200px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+    background-color: #8D9C63;
+    color: white;
+}
+
+.dropdown-menu a {
+    color: #2E4F4F;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    color: white;
+}
+
+.dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
