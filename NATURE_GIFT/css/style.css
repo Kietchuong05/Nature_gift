@@ -8,7 +8,6 @@
 body {
     font-family: 'Nunito', sans-serif;
     background-color: #E0E7E9;
-    color: #2E4F4F;
     line-height: 1.6;
 }
  ul{
@@ -139,18 +138,31 @@ body {
     box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 .menu-list{
-    color: #2E4F4F;
+    color: white;
     display: flex;
     justify-content: center;
     text-align: center;
 }
+.nav__link.nav-ac a {
+    color: white !important;
+}
+
+.menu-list li a {
+    color: #2E4F4F; /* màu mặc định hoặc đen */
+}
+
 .menu-list > li {
     padding: 10px;
+    
     font-size: 1.2rem;
 }
 .menu-list > li > i {
     padding: 5px;
 }
+.menu-list > li > a:hover {
+    color: white;
+}
+
 nav{
     height: 3rem;
 }
@@ -160,10 +172,11 @@ nav{
     color: white;
     border-radius: 15px;
 }
+
 .nav__link.active, 
 .nav__link.nav-ac {
-    background-color: #8D9C63 !important;
-    color: white;
+    background-color: #8D9C63;
+    color: white !important; ;
     border-radius: 15px;
 }
 /* Dropdown styles */
@@ -218,3 +231,4 @@ nav{
 .dropdown:hover .dropdown-icon {
     transform: rotate(180deg);
 }
+
