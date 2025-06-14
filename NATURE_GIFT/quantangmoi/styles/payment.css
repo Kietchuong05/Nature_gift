@@ -1,0 +1,39 @@
+.payment-summary {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.payment-summary h3 {
+    margin-bottom: 20px;
+}
+
+.payment-summary__details {
+    margin-bottom: 20px;
+}
+
+.payment-summary__details p {
+    margin: 5px 0;
+}
+
+.payment-summary__total {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#confirm-payment {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#confirm-payment:hover {
+    background: #444;
+}

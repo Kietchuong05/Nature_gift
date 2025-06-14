@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURE GIFT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo_green_icon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div class="hero-section">
+            <div class="tree-animation">
+                <div class="left-branch"></div>
+                <div class="right-branch"></div>
+                <div class="logo-wrapper">
+                    <img src="images/logo1.png" alt="Nature Gifting Logo" class="logo-img">
+                    <h1>NATURE GIFT</h1>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-menu">
+            <ul class="menu-list">
+                <li class="nav__link nav-ac"><a href="index.html"><i class="ri-home-4-line"></i>HOME</a></li>
+                <li class="nav__link dropdown">
+                    <a href="#"><i class="ri-leaf-line"></i>CHỦ ĐỀ <i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sinh nhật</a></li>
+                        <li><a href="#">Kỷ niệm</a></li>
+                        <li><a href="#">Tốt nghiệp</a></li>
+                        <li><a href="#">Tình yêu</a></li>
+                        <li><a href="#">Cảm ơn</a></li>
+                    </ul>
+                </li>
+                <li class="nav__link dropdown">
+                    <a href="#"><i class="ri-group-line"></i>ĐỐI TƯỢNG<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="event.preventDefault(); showFlowerSection('hoa-tang-nguoi-yeu')">Hoa tặng người yêu</a></li>
+                        <li><a href="#" onclick="event.preventDefault(); showFlowerSection('hoa-tang-ban-be')">Hoa tặng bạn bè</a></li>
+                        <li><a href="#" onclick="event.preventDefault(); showFlowerSection('hoa-tang-sep')">Hoa tặng sếp</a></li>
+                    </ul>
+                </li>
+                <li class="nav__link dropdown">
+                    <a href="#"><i class="ri-palette-line"></i>KIỂU DÁNG<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Bó hoa tươi</a></li>
+                        <li><a href="#">Giỏ hoa tươi</a></li>
+                        <li><a href="#">Bình hoa tươi</a></li>
+                        <li><a href="#">Hộp hoa tươi</a></li>
+                        <li><a href="#">Hộp Mica</a></li>
+                    </ul>
+                </li>
+                <li class="nav__link dropdown">
+                    <a href="#"><i class="ri-gift-line"></i>QUÀ TẶNG KÈM<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Chocolate</a></li>
+                        <li><a href="#">Gấu bông</a></li>
+                        <li><a href="#">Trái cây</a></li>
+                        <li><a href="#">Nến thơm</a></li>
+                        <li><a href="#">Bánh kem Brodard</a></li>
+                    </ul>
+                </li>
+                <li class="nav__link">
+                    <a href="#"><i class="ri-heart-line"></i>Ý NGHĨA</a>                    
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Tìm kiếm quà tặng..." aria-label="Nhập từ khóa tìm kiếm">
+                    <button type="submit" aria-label="Tìm kiếm">🔍</button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="breadcrumb" id="breadcrumb" style="display: none;">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><span>/</span></li>
+                <li><a href="#">Đối tượng</a></li>
+                <li><span>/</span></li>
+                <li><span id="breadcrumb-last">Hoa tặng người yêu</span></li>
+            </ul>
+        </div>
+
+        <section id="hoa-tang-nguoi-yeu" class="flower-section">
+            <div class="flower-grid">
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Me Before You', 'images/hoany/hoany1.jpg', 450000, 750000, 'Bó hoa hồng đỏ, hoa baby trắng và lá xanh trang trí')">
+                        <img src="images/hoany/hoany1.jpg" alt="Me Before You">
+                        <div class="sale-label">SALE</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Me Before You</h3>
+                    <p><span class="original-price">750.000đ</span> <span class="price">450.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Dynamic', 'images/hoany/hoany5.jpg', 450000, 750000, 'Bó hoa cẩm chướng hồng, hoa baby và lá bạc')">
+                        <img src="images/hoany/hoany5.jpg" alt="Dynamic">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Dynamic</h3>
+                    <p><span class="original-price">750.000đ</span> <span class="price">450.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Thầm Lặng', 'images/hoany/hoany4.png', 650000, null, 'Bình hoa ly trắng và hoa hồng phấn')">
+                        <img src="images/hoany/hoany4.png" alt="Thầm Lặng">
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Thầm Lặng</h3>
+                    <p><span class="price">650.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Ohara', 'images/hoany/hoany2.jpg', 950000, 1045000, 'Hộp hoa hồng đỏ và hoa cẩm tú cầu')">
+                        <img src="images/hoany/hoany2.jpg" alt="Ohara">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Ohara</h3>
+                    <p><span class="original-price">1.045.000đ</span> <span class="price">950.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Love Story', 'images/hoany/hoany6.jpg', 500000, null, 'Bó hoa hồng pastel và hoa baby')">
+                        <img src="images/hoany/hoany6.jpg" alt="Love Story">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Love Story</h3>
+                    <p><span class="price">500.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Nữ Hoàng', 'images/hoany/hoany7.jpg', 600000, null, 'Bó hoa hồng vàng và hoa cúc họa mi')">
+                        <img src="images/hoany/hoany7.jpg" alt="Nữ Hoàng">
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Nữ Hoàng</h3>
+                    <p><span class="price">600.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Tin Yêu', 'images/hoany/hoany8.png', 750000, null, 'Hộp hoa hồng đỏ và chocolate cao cấp')">
+                        <img src="images/hoany/hoany8.png" alt="Tin Yêu">
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Tin Yêu</h3>
+                    <p><span class="price">750.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Luxury Vase 21', 'images/hoany/hoany3.jpg', 1800000, 2000000, 'Bình hoa hồng nhập khẩu và hoa lan')">
+                        <img src="images/hoany/hoany3.jpg" alt="Luxury Vase 21">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Luxury Vase 21</h3>
+                    <p><span class="original-price">2.000.000đ</span> <span class="price">1.800.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Trái Tim Yêu Thương', 'images/hoany/hoany10.png', 1600000, 1700000, 'Hộp hoa hồng đỏ hình trái tim')">
+                        <img src="images/hoany/hoany10.png" alt="Trái Tim Yêu Thương">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Trái Tim Yêu Thương</h3>
+                    <p><span class="original-price">1.700.000đ</span> <span class="price">1.600.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Tuổi Hồng', 'images/hoany/hoany9.jpg', 500000, null, 'Bó hoa hồng phấn và hoa cẩm chướng')">
+                        <img src="images/hoany/hoany9.jpg" alt="Tuổi Hồng">
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Tuổi Hồng</h3>
+                    <p><span class="price">500.000 đ</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hoa-tang-ban-be" class="flower-section">
+            <div class="flower-grid">
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Sunshine Smiles', 'images/hoabanbe/1.jpg', 400000, 600000, 'Bó hoa hướng dương và hoa cúc trắng')">
+                        <img src="images/hoabanbe/1.jpg" alt="Sunshine Smiles">
+                        <div class="sale-label">SALE</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Sunshine Smiles</h3>
+                    <p><span class="original-price">600.000đ</span> <span class="price">400.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Friendship Glow', 'images/hoabanbe/2.jpg', 550000, null, 'Giỏ hoa cẩm chướng và hoa baby')">
+                        <img src="images/hoabanbe/2.jpg" alt="Friendship Glow">
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Friendship Glow</h3>
+                    <p><span class="price">550.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Cheerful Vibes', 'images/hoabanbe/3.jpg', 700000, 850000, 'Hộp hoa hồng vàng và hoa lan tím')">
+                        <img src="images/hoabanbe/3.jpg" alt="Cheerful Vibes">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Cheerful Vibes</h3>
+                    <p><span class="original-price">850.000đ</span> <span class="price">700.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Bright Days', 'images/hoabb/hoabb4.jpg', 450000, null, 'Bó hoa cúc họa mi và lá xanh')">
+                        <img src="images/hoabanbe/4.jpg" alt="Bright Days">
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Bright Days</h3>
+                    <p><span class="price">450.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Joyful Moments', 'images/hoabb/hoabb5.jpg', 800000, 950000, 'Hộp hoa hồng phấn và chocolate')">
+                        <img src="images/hoabanbe/5.jpg" alt="Joyful Moments">
+                        <div class="sale-label">SALE</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Joyful Moments</h3>
+                    <p><span class="original-price">950.000đ</span> <span class="price">800.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Happy Bloom', 'images/hoabb/hoabb6.jpg', 600000, null, 'Bó hoa hồng vàng và hoa cẩm chướng')">
+                        <img src="images/hoabanbe/6.png" alt="Happy Bloom">
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Happy Bloom</h3>
+                    <p><span class="price">600.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Loyalty Bouquet', 'images/hoabb/hoabb7.jpg', 750000, 900000, 'Giỏ hoa hướng dương và hoa baby')">
+                        <img src="images/hoabanbe/7.jpg" alt="Loyalty Bouquet">
+                        <div class="sale-label">SALE</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Loyalty Bouquet</h3>
+                    <p><span class="original-price">900.000đ</span> <span class="price">750.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Friendship Vase', 'images/hoabb/hoabb8.jpg', 950000, 1100000, 'Bình hoa cẩm tú cầu và hoa hồng')">
+                        <img src="images/hoabanbe/8.jpg" alt="Friendship Vase">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Friendship Vase</h3>
+                    <p><span class="original-price">1.100.000đ</span> <span class="price">950.000 đ</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hoa-tang-sep" class="flower-section">
+            <div class="flower-grid">
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Hoa tặng sự kiện(+20 hoa)', 'images/hoasep/1.jpg', 200000, null, 'Bó hoa hướng dương và lá xanh')">
+                        <img src="images/hoasep/1.jpg" alt="Hoa tặng sự kiện(+20 hoa)">
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Hoa tặng sự kiện(+20 hoa)</h3>
+                    <p><span class="price">200.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('New Energy', 'images/hoasep/2.jpg', 350000, null, 'Bó hoa hướng dương và hoa cẩm chướng')">
+                        <img src="images/hoasep/2.jpg" alt="New Energy">
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>New Energy</h3>
+                    <p><span class="price">350.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Only Rose 1', 'images/hoasep/3.jpg', 550000, 700000, 'Bó hoa hồng đỏ')">
+                        <img src="images/hoasep/3.jpg" alt="Only Rose 1">
+                        <div class="sale-label">SALE</div>
+                        <div class="freeship-label">FREESHIP</div>
+                    </div>
+                    <h3>Only Rose 1</h3>
+                    <p><span class="original-price">700.000đ</span> <span class="price">550.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Ohara', 'images/hoasep/4.jpg', 950000, 1045000, 'Hộp hoa hồng đỏ và hoa cẩm tú cầu')">
+                        <img src="images/hoasep/4.jpg" alt="Ohara">
+                        <div class="sale-label">SALE</div>
+                        <div class="label">NEW!</div>
+                    </div>
+                    <div class="freeship-label">FREESHIP</div>
+                    <h3>Ohara</h3>
+                    <p><span class="original-price">1.045.000đ</span> <span class="price">950.000 đ</span></p>
+                </div>
+                <div class="flower-item">
+                    <div class="flower-image" onclick="showProductDetail('Boss - Luxury vase', 'images/hoasep/5.jpg', 550000, null, 'Chậu hoa lavender')">
+                        <img src="images/hoasep/5.jpg" alt="Boss - Luxury vase">
+                        <div class="freeship-label">FREESHIP</div>
+                    </div>
+                    <h3>Boss - Luxury vase</h3>
+                    <p><span class="price">10.000.000 đ</span></p>
+                </div>
+            </div>
+        </section>
+
+        <div id="product-detail" class="product-detail product-detail-layout" style="display: none;">
+            <div class="product-content">
+                <div class="product-image-wrapper">
+                    <img src="" alt="Product Image" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name"></h2>
+                    <p class="product-price"><span class="original-price"></span> <span class="price"></span></p>
+                    <p>Sản phẩm bao gồm: <span class="product-description"></span></p>
+                    <p>Giá đã bao gồm 8% VAT - Sản phẩm hỗ trợ giao miễn phí khu vực gần</p>
+                    <p class="product-instructions">Sản phẩm được thiết kế và đóng gói cẩn thận tại xưởng của chúng tôi</p>
+                    <p class="product-instructions">Sản phẩm giao tận nơi trên toàn quốc</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        <button class="buy-now">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-actions">
+                <button class="close-detail">Quay Lại</button>
+                <p class="hotline">Gọi ngay: <span>1800 6353</span></p>
+            </div>
+            <div class="special-offers">
+                <h3>Ưu đãi đặc biệt</h3>
+                <ul>
+                    <li>Tặng Banner Hóa Thiệp (Trị giá 20.000đ - 50.000đ) Miễn Phí</li>
+                    <li>Giảm Tiếp 3% Cho Đơn Hàng ONLINE Lần Thứ 2, 5% Cho Đơn Hàng ONLINE Lần Thứ 6 Và 10% Cho Đơn Hàng ONLINE Lần Thứ 12.</li>
+                    <li>Miễn Phí Giao Khu Vực Nội Thành (Chi Tiết)</li>
+                    <li>Giao Gấp Trong Vòng 2 Giờ</li>
+                    <li>Cam Kết 100% Hoàn Lại Tiền Nếu Bạn Không Hài Lòng</li>
+                    <li>Cam Kết Hoa Tươi Trên 3 Ngày</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="search-results" id="search-results" style="display: none;"></div>
+    </header>
+    <script src="js/index.js"></script>
+</body>
+</html>

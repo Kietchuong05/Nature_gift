@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f2f4f7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20%;
+    background: linear-gradient(90deg,
+            #141E30,
+            #203A43,
+            #2C5364);
+    color: #fff;
+}
+
+.search-bar {
+    position: relative;
+    width: 40%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.search-bar i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+main {
+    width: 60%;
+    margin: auto;
+}
