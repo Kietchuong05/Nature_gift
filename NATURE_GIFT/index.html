@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo_green_icon.ico" type="image/x-icon">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
     <header class="header">
@@ -24,13 +21,14 @@
                 </div>
             </div>
         </div>
+        
         <nav class="main-menu">
             <ul class="menu-list">
                 <li class="nav__link nav-ac"><a href="index.html"><i class="ri-home-4-line"></i>HOME</a></li>
                 <li class="nav__link dropdown">
                     <a href="#"><i class="ri-leaf-line"></i>CHỦ ĐỀ <i class="ri-arrow-down-s-line dropdown-icon"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" >Sinh nhật</a></li>
+                        <li><a href="#">Sinh nhật</a></li>
                         <li><a href="#">Kỷ niệm</a></li>
                         <li><a href="#">Tốt nghiệp</a></li>
                         <li><a href="#">Tình yêu</a></li>
@@ -40,11 +38,9 @@
                 <li class="nav__link dropdown">
                     <a href="#"><i class="ri-group-line"></i>ĐỐI TƯỢNG<i class="ri-arrow-down-s-line dropdown-icon"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Hoa tặng người yêu</a></li>
-                        <li><a href="#">Hoa tặng bạn bè</a></li>
-                        <li><a href="#">Hoa tặng sếp</a></li>
-                        <li><a href="#">Hoa tặng đồng nghiệp</a></li>
-                        <li><a href="#">Hoa tặng người thân</a></li>
+                        <li><a href="doituong.html">Hoa tặng người yêu</a></li>
+                        <li><a href="doituong.html?section=hoa-tang-ban-be">Hoa tặng bạn bè</a></li>
+                        <li><a href="doituong.html?section=hoa-tang-sep">Hoa tặng sếp</a></li>
                     </ul>
                 </li>
                 <li class="nav__link dropdown">
@@ -70,22 +66,15 @@
                 <li class="nav__link">
                     <a href="#"><i class="ri-heart-line"></i>Ý NGHĨA</a>                    
                 </li>
-                <!-- Thanh tìm kiếm được thêm vào đây -->
                 <li class="search">
                     <input type="text" placeholder="Tìm kiếm quà tặng..." aria-label="Nhập từ khóa tìm kiếm">
                     <button type="submit" aria-label="Tìm kiếm">🔍</button>
                 </li>
             </ul>
-
-            <!-- <div class="nav__toggle" id="nav_toggle">
-                <i class="ri-menu-line nav_burger"></i>
-                <i class="ri-close-line nav_close"></i>
-            </div> -->
         </nav>
+
+        <div class="search-results" id="search-results" style="display: none;"></div>
     </header>
-    <div 
-        class="search-results" id="search-results" style="display: none;">
-    </div>
     <script src="js/index.js"></script>
 </body>
 </html>
